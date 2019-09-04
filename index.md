@@ -58,10 +58,10 @@ Leaflet is one of the top sources for mobile-friendly interactive maps. It is si
 2. Within the *script* tag, create the map variable.
 
 Example:
-   ```html
+   ```javascript
    var mymap = L.map('mapid').setView([coordinate 1, coordinate 2], zoom);
    ```
-   ```html
+   ```javascript
    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
    ```
 3. Next, we will add the the tile layer for the map.
@@ -92,14 +92,14 @@ Example:
 Let's add a marker, a circle and a polygon to the map.
  
 1. First, we will add the marker. Be sure to add this in the *script* tag.
-   ```html
+   ```javascript
    var marker = L.marker([36.123080, -97.069668]).addTo(mymap);
    ```
    
 ![Marker](images/Marker.PNG)
    
 2. Next, we will add a circle.
-   ```html
+   ```javascript
    var circle = L.circle([36.123080, -97.069668], {
 	color: 'red',
 	fillColor: 'red',
@@ -111,7 +111,7 @@ Let's add a marker, a circle and a polygon to the map.
 ![Circle](images/Circle.PNG)
  
 3. Finally, we will add a polygon. 
- ```html
+ ```javascript
    var polygon = L.polygon([
 	[36.123080, -97.069668],
 	[36.133100, -97.075890],
@@ -124,26 +124,45 @@ Let's add a marker, a circle and a polygon to the map.
 #### Pop Ups
 Pop ups can be used to add information to map objects.
 1. Leaflet has a shortcut for adding popups. Here are a few examples.
-  ```html
+  ```javascript
   marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
    ```
-   ```html
+   ```javascript
   circle.bindPopup("I am a circle.");
    ```
-   ```html
+   ```javascript
   polygon.bindPopup("I am a polygon.");
    ```
 ![Popup](images/Popup.PNG)
 
+Note: Be sure to add all javascript in the *script* tag.
+
 2. You can also create stand-alone pop ups by creating them as a layer.
-```html
+```javascript
   var popup = L.popup()
-	.setLatLng([51.5, -0.09])
+	.setLatLng([36.125680, -97.1123])
 	.setContent("I am a standalone popup.")
 	.openOn(mymap);
    ```
 
 ![Stand alone pop up](images/PopupSolo.PNG)
+
+#### Events
+Events can be used to encourage user interaction.
+1. In the *script* tag, create the event below. This will create a pop up that tells the user the coordinates of where they clicked.
+```javascript
+  var popup = L.popup();
+
+function onMapClick(e) {
+	popup
+		.setLatLng(e.latlng)
+		.setContent("You clicked the map at " + e.latlng.toString())
+		.openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
+   ```
+![Event Click Shows Coordinates](images/Event.PNG)
 
 ## Conclusion
 
