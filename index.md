@@ -90,20 +90,20 @@ Example:
 Let's add a marker, a circle and a polygon to the map.
  
 1. First, we will add the marker. Be sure to add this in the *script* tag.
-   ```javascript
+   ```html
    var marker = L.marker([36.123080, -97.069668]).addTo(mymap);
    ```
    
 ![Marker](images/Marker.PNG)
    
 2. Next, we will add a circle.
-   ```javascript
+   ```html
    var circle = L.circle([36.123080, -97.069668], {
 	color: 'red',
 	fillColor: 'red',
 	fillOpacity: 0.5,
-	radius: 500
-}).addTo(mymap);
+	radius: 500 
+	}).addTo(mymap);
    ```
    
 ![Circle](images/Circle.PNG)
