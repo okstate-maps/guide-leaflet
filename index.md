@@ -82,6 +82,8 @@ Example:
 	accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 }).addTo(mymap);
    ```
+4. Your map should be visible in the the live viewer.
+![Map View](images/MapView.PNG)
 
 ## Conclusion
 
