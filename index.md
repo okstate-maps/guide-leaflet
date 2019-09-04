@@ -10,6 +10,7 @@ Created by [OSU Maps and Spatial Data](https://info.library.okstate.edu/map-room
 - - Adding the Map
 - - Adding Markers, Circles and Polygons
 - - Pop Ups
+- - Events
 - Conclusion
 - Further Reading/Resources
 
