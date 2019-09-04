@@ -108,6 +108,16 @@ Let's add a marker, a circle and a polygon to the map.
    
 ![Circle](images/Circle.PNG)
  
+3. Finally, we will add a polygon. 
+ ```html
+   var polygon = L.polygon([
+	[36.123080, -97.069668],
+	[36.133100, -97.075890],
+	[36.133270, -97.089483]
+]).addTo(mymap);
+   ```
+   
+   ![Polygon](images/Polygon.PNG)
 
 ## Conclusion
 
