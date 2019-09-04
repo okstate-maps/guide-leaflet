@@ -133,6 +133,17 @@ Pop ups can be used to add information to map objects.
    ```html
   polygon.bindPopup("I am a polygon.");
    ```
+![Popup](images/Popup.PNG)
+
+2. You can also create stand-alone pop ups by creating them as a layer.
+```html
+  var popup = L.popup()
+	.setLatLng([51.5, -0.09])
+	.setContent("I am a standalone popup.")
+	.openOn(mymap);
+   ```
+
+![Stand alone pop up](images/PopupSolo.PNG)
 
 ## Conclusion
 
