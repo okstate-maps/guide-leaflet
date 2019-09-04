@@ -8,6 +8,7 @@ Created by [OSU Maps and Spatial Data](https://info.library.okstate.edu/map-room
 - *Leaflet*
 - - Page Set Up
 - - Adding the Map
+- - Adding Markers, Circles and Polygons
 - Conclusion
 - Further Reading/Resources
 
