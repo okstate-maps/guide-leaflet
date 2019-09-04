@@ -49,6 +49,39 @@ Leaflet is one of the top sources for mobile-friendly interactive maps. It is si
    ```
 
 #### Adding the Map
+1. Within the *body* tag, add a script tag.
+   ```html
+   <script></script>
+   ```
+2. Within the *script* tag, create the map variable.
+
+Example:
+   ```html
+   var mymap = L.map('mapid').setView([coordinate 1, coordinate 2], zoom);
+   ```
+   ```html
+   var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+   ```
+ 3. Next, we will add the the tile layer for the map.
+ 
+ Example:
+   ```html
+   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	maxZoom: 18,
+	id: 'mapbox.streets',
+	accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+   ```
+   ```html
+   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
+            {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	maxZoom: 18,
+	id: 'mapbox.streets',
+	accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+}).addTo(mymap);
+   ```
 
 ## Conclusion
 
