@@ -65,7 +65,7 @@ Example:
  3. Next, we will add the the tile layer for the map.
  
  Example:
-   ```html
+   ```javascript
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
@@ -73,7 +73,7 @@ Example:
 	accessToken: 'your.mapbox.access.token'
 }).addTo(mymap);
    ```
-   ```html
+   ```javascript
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
             {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -83,7 +83,17 @@ Example:
 }).addTo(mymap);
    ```
 4. Your map should be visible in the the live viewer.
+
 ![Map View](images/MapView.PNG)
+
+ #### Adding Markers, Circles and Polygons
+ Let's add a marker, a circle and a polygon to the map.
+ 
+ 1. First, we will add the marker.
+   ```javascript
+   L.marker([36.123080, -97.069668]).addTo(map);
+   ```
+ 
 
 ## Conclusion
 
