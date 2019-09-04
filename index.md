@@ -166,6 +166,7 @@ mymap.on('click', onMapClick);
 ![Event Click Shows Coordinates](images/Event.PNG)
 
 ## Conclusion
+Leaflet makes incorporating interactive maps into your website an easy adventure. 
 
 ## Further Reading/Resources
 
