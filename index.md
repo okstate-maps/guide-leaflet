@@ -24,12 +24,21 @@ Leaflet is one of the top sources for mobile-friendly interactive maps. It is si
 ![Basic Tags](images/SetUp.PNG)
 
 3. Add the Leaflet CSS stylesheet link to the head of the document.
-    <pre><link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   ```html
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/></pre>
-
-   
-   
+   crossorigin=""/>
+   ```
+4. Add the Leaflet Javascript file after Leaflet CSS.
+   ```html
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+   ```
+5. Add a *div* element within the body tag where you would like the map to appear. You can give it a different ID if you prefer.
+   ```html
+    <div id="mapid"></div>
+   ```
 
 
 #### Adding the Map
