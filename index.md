@@ -62,9 +62,9 @@ Example:
    ```html
    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
    ```
- 3. Next, we will add the the tile layer for the map.
+3. Next, we will add the the tile layer for the map.
  
- Example:
+Example:
    ```javascript
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -86,13 +86,27 @@ Example:
 
 ![Map View](images/MapView.PNG)
 
- #### Adding Markers, Circles and Polygons
- Let's add a marker, a circle and a polygon to the map.
+#### Adding Markers, Circles and Polygons
+Let's add a marker, a circle and a polygon to the map.
  
- 1. First, we will add the marker.
+1. First, we will add the marker. Be sure to add this in the *script* tag.
    ```javascript
-   L.marker([36.123080, -97.069668]).addTo(map);
+   var marker = L.marker([36.123080, -97.069668]).addTo(mymap);
    ```
+   
+![Marker](images/Marker.PNG)
+   
+2. Next, we will add a circle.
+   ```javascript
+   var circle = L.circle([36.123080, -97.069668], {
+	color: 'red',
+	fillColor: 'red',
+	fillOpacity: 0.5,
+	radius: 500
+}).addTo(mymap);
+   ```
+   
+![Circle](images/Circle.PNG)
  
 
 ## Conclusion
