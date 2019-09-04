@@ -9,6 +9,7 @@ Created by [OSU Maps and Spatial Data](https://info.library.okstate.edu/map-room
 - - Page Set Up
 - - Adding the Map
 - - Adding Markers, Circles and Polygons
+- - Pop Ups
 - Conclusion
 - Further Reading/Resources
 
@@ -119,6 +120,19 @@ Let's add a marker, a circle and a polygon to the map.
    ```
    
    ![Polygon](images/Polygon.PNG)
+   
+#### Pop Ups
+Pop ups can be used to add information to map objects.
+1. Leaflet has a shortcut for adding popups. Here are a few examples.
+  ```html
+  marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+   ```
+   ```html
+  circle.bindPopup("I am a circle.");
+   ```
+   ```html
+  polygon.bindPopup("I am a polygon.");
+   ```
 
 ## Conclusion
 
